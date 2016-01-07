@@ -26,8 +26,6 @@ package devtools.pojotester;
 
 /**
  * This is a sample POJO class.
- *
- * @author Raymond Tsang | 2fayfays@gmail.com
  */
 public class MyPojo {
    private int i;

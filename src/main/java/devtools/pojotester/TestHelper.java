@@ -30,9 +30,8 @@ import org.junit.Assert;
 
 /**
  * This is a wrapper class for testing the bean with JUnit.
- * @see devtools.pojotester.MyPojoTest
  *
- * @author Raymond Tsang | 2fayfays@gmail.com
+ * @see devtools.pojotester.MyPojoTest
  */
 public class TestHelper {
    

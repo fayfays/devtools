@@ -31,8 +31,6 @@ import java.util.UUID;
 
 /**
  * This class tests the getter and setter method of any POJO Java bean. 
- *
- * @author Raymond Tsang | 2fayfays@gmail.com
  */
 
 public class PojoTester {
