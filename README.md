@@ -13,17 +13,20 @@ The tester supports the following prmitive types:  String, int, long , float, do
 2. See the MyPojoTest.java in the test package as an example for your unit tests.  It is as simple as one method call.
 3. Invoke the test method if you are using JUnit as follow:
 
+```
 @Test
 public void test() {
    TestHelper.jUnitWrapper(new MyPojo());
 }
-
+```
 Alternatively, if you are not using JUnit and still want to test the POJO, you could invoke the PojoTester directly:
 
+```
 MyPojo anyPojoBean = new MyPojo();
 Map<String, Boolean> result = new PojoTester().testBean(anyPojoBean);
 for (String k : result.keySet()) {
    Assert.assertTrue("Property [" + k + "] failed to return the expected value, check implementation.", result.get(k));
    System.out.println(k + " --> " + result.get(k));
 }
+```
   
