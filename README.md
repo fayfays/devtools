@@ -15,103 +15,103 @@ The tester supports the following prmitive types:  String, int, long , float, do
 
 Here is a sample POJO class:
 
-  public class MyPojo {
-     private int i;
-     private long l;
-     private float f;
-     private double d;
-     private Integer i2;
-     private Long l2;
-     private Float f2;
-     private Double d2;
-     private String s;
-  
-     public int getI() {
-        return i;
-     }
-  
-     public void setI(int i) {
-        this.i = i;
-     }
-  
-     public long getL() {
-        return l;
-     }
-  
-     public void setL(long l) {
-        this.l = l;
-     }
-  
-     public float getF() {
-        return f;
-     }
-  
-     public void setF(float f) {
-        this.f = f;
-     }
-  
-     public double getD() {
-        return d;
-     }
-  
-     public void setD(double d) {
-        this.d = d;
-     }
-  
-     public Integer getI2() {
-        return i2;
-     }
-  
-     public void setI2(Integer i2) {
-        this.i2 = i2;
-     }
-  
-     public Long getL2() {
-        return l2;
-     }
-  
-     public void setL2(Long l2) {
-        this.l2 = l2;
-     }
-  
-     public Float getF2() {
-        return f2;
-     }
-  
-     public void setF2(Float f2) {
-        this.f2 = f2;
-     }
-  
-     public Double getD2() {
-        return d2;
-     }
-  
-     public void setD2(Double d2) {
-        this.d2 = d2;
-     }
-  
-     public String getS() {
-        return s;
-     }
-  
-     public void setS(String s) {
-        this.s = s;
-     }
-  }
+public class MyPojo {
+   private int i;
+   private long l;
+   private float f;
+   private double d;
+   private Integer i2;
+   private Long l2;
+   private Float f2;
+   private Double d2;
+   private String s;
+
+   public int getI() {
+      return i;
+   }
+
+   public void setI(int i) {
+      this.i = i;
+   }
+
+   public long getL() {
+      return l;
+   }
+
+   public void setL(long l) {
+      this.l = l;
+   }
+
+   public float getF() {
+      return f;
+   }
+
+   public void setF(float f) {
+      this.f = f;
+   }
+
+   public double getD() {
+      return d;
+   }
+
+   public void setD(double d) {
+      this.d = d;
+   }
+
+   public Integer getI2() {
+      return i2;
+   }
+
+   public void setI2(Integer i2) {
+      this.i2 = i2;
+   }
+
+   public Long getL2() {
+      return l2;
+   }
+
+   public void setL2(Long l2) {
+      this.l2 = l2;
+   }
+
+   public Float getF2() {
+      return f2;
+   }
+
+   public void setF2(Float f2) {
+      this.f2 = f2;
+   }
+
+   public Double getD2() {
+      return d2;
+   }
+
+   public void setD2(Double d2) {
+      this.d2 = d2;
+   }
+
+   public String getS() {
+      return s;
+   }
+
+   public void setS(String s) {
+      this.s = s;
+   }
+}
 
 Then invoke the test method using JUnit as follow:
 
-   @Test
-   public void test() {
-      TestHelper.jUnitWrapper(new MyPojo());
-   }
+@Test
+public void test() {
+   TestHelper.jUnitWrapper(new MyPojo());
+}
 
 Alternatively, if you are not using JUnit and still want to test the POJO, you could invoke the PojoTester directly:
 
-  MyPojo anyPojoBean = new MyPojo();
-  Map<String, Boolean> result = new PojoTester().testBean(anyPojoBean);
-  for (String k : result.keySet()) {
-     Assert.assertTrue("Property [" + k + "] failed to return the expected value, check implementation.", result.get(k));
-     System.out.println(k + " --> " + result.get(k));
-  }
+MyPojo anyPojoBean = new MyPojo();
+Map<String, Boolean> result = new PojoTester().testBean(anyPojoBean);
+for (String k : result.keySet()) {
+   Assert.assertTrue("Property [" + k + "] failed to return the expected value, check implementation.", result.get(k));
+   System.out.println(k + " --> " + result.get(k));
+}
   
