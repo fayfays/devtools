@@ -13,7 +13,7 @@ The tester supports the following prmitive types:  String, int, long , float, do
 2. See the MyPojoTest.java in the test package as an example for your unit tests.  It is as simple as one method call.
 3. In your test code, invoke the method testBean, for example:
 
-Here is the sample POJO class:
+Here is a sample POJO class:
 
   public class MyPojo {
      private int i;
