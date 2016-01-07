@@ -9,7 +9,7 @@ This class helps testing getter and setter method pairs.  It simply retrieves a 
 The tester supports the following prmitive types:  String, int, long , float, double.  The compareOther method can be overriden by subclass when handling specific property types.
 
 # how to use
-1. Check out the source code from github: "git@github.com:fayfays/devtools
+1. Check out the source code using the URL provided by github.
 2. See the MyPojoTest.java in the test package as an example for your unit tests.  It is as simple as one method call.
 3. Invoke the test method if you are using JUnit as follow:
 
