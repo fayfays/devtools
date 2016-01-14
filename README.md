@@ -2,16 +2,16 @@
 This repository includes various kind of development tools for Java developers.
 
 # pojo tester
-The movtivation of creating this testing tool was to address the requirement of maintaining a igh ccode overage rate.  It saves  the developer a lot of work by testing POJO classes  without creating  one to one test classes.
+The movtivation of creating this testing tool was to address the requirement of maintaining a high code coverage rate.  The tools save the developers a lot of work and time by testing POJO classes without manually creating one to one corresponding test class.
 
-This class helps testing getter and setter method pairs.  It simply retrieves a pair of get and set methods from the given bean instance which sharing the same name suffix, that is the property name.  Next it will invoke the compare<Type> method based on the parameter/return type of the method and return the result.  The compareXYZ methods can be overriden according for your customized needs.
+This class helps with testing the getter and setter method pairs.  It leverage Java reflections to find and match pairs of get and set methods from a given bean instance.  After passing the scanning stage, it will invoke the compare<Type> methods based on the parameter/return type of the method pairs and return a boolean whether the value matches or not.  The class method compareXYZ methods can be overriden accordingly, based on own customized needs.
 
-The tester supports the following prmitive types:  String, int, long , float, double.  The compareOther method can be overriden by subclass when handling specific property types.
+The tester supports the following primitive types:  String, int, long , float, double, Integer, Long, Float and Double.  The compareOther method can also be overriden by the subclass whenever handling non-primitive types is needed.
 
 # how to use
-1. Check out the source code using the URL provided by github.
-2. See the MyPojoTest.java in the test package as an example for your unit tests.  It is as simple as one method call.
-3. Invoke the test method if you are using JUnit as follow:
+1. Check out the source code using the the git repository URL.
+2. See the MyPojoTest.java in the test package as an example for your unit tests.  It is as simple as just one method call.
+3. If you are using JUnit, here is an example:
 
 ```
 @Test
@@ -19,7 +19,7 @@ public void test() {
    TestHelper.jUnitWrapper(new MyPojo());
 }
 ```
-Alternatively, if you are not using JUnit and still want to test the POJO, you could invoke the PojoTester directly:
+Alternatively, if you are not using JUnit and you still want to test the POJO, you could invoke the PojoTester directly:
 
 ```
 MyPojo anyPojoBean = new MyPojo();
